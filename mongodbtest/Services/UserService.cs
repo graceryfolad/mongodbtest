@@ -15,7 +15,7 @@ namespace mongodbtest.Services
           //  var client = new MongoClient(settings.ConnectionString);
           //  var database = client.GetDatabase(settings.DatabaseName);
 
-            var constr = MongoClientSettings.FromConnectionString("mongodb+srv://monged:vW4egU33UivMkwFo@cluster0.4xv29.mongodb.net/mongotest?retryWrites=true&w=majority");
+            var constr = MongoClientSettings.FromConnectionString("");
             var client = new MongoClient(constr);
             var database = client.GetDatabase("mongotest");
             
