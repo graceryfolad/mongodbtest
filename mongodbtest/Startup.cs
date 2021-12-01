@@ -8,6 +8,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using mongodbtest.Models;
+using mongodbtest.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,6 +33,8 @@ namespace mongodbtest
             services.AddSingleton<IDatabaseSettings>(provider =>
                 provider.GetRequiredService<IOptions<DatabaseSettings>>().Value);
 
+
+            services.AddScoped<UserService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -12,22 +13,24 @@ namespace mongodbtest.Models
             address = new AddressDTO();
         }
 
-  //      "id": "32215c1a-10d7-454d-a7ef-a3703cd528ba",
+        //      "id": "32215c1a-10d7-454d-a7ef-a3703cd528ba",
 
-  //"name": "Leanne Graham",
+        //"name": "Leanne Graham",
 
-  //"username": "Bret",
+        //"username": "Bret",
 
-  //"phone": "12345678",
+        //"phone": "12345678",
 
-  //"email": Sincere @april.biz,
+        //"email": Sincere @april.biz,
 
-  //"address": {
+        //"address": {
 
-        public Guid id { get; set; }
+        public ObjectId _id { get; set; }
+        //public Guid id { get; set; }
         public string name { get; set; }
         public string username { get; set; }
         public string phone { get; set; }
+        public string email { get; set; }
         public AddressDTO address { get; set; }
     }
 
@@ -41,7 +44,7 @@ namespace mongodbtest.Models
 
         //"zipcode": "92998-3874"
 
-        public Guid id { get; set; }
+        public string id { get; set; }
         public string street { get; set; }
         public string city { get; set; }
         public string zipcode { get; set; }

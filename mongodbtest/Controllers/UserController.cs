@@ -14,7 +14,7 @@ namespace mongodbtest.Controllers
     public class UserController : ControllerBase
     {
         private readonly UserService _user;
-        UserController(UserService userservice)
+        public UserController(UserService userservice)
         {
             _user = userservice;
         }
